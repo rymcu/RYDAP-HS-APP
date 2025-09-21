@@ -1,7 +1,7 @@
 ### RYDAP-HS-APP
 
-[![](https://img.shields.io/badge/RYDAP--HS--APP-v1.1.3-444?logo=github&style=flat&labelColor=333)](https://github.com/rymcu/RYDAP-HS-APP/releases)
-[![](https://img.shields.io/badge/RYMCU-.COM-444?logo=googlechrome&style=flat&labelColor=333)](https://rymcu.com)
+[![](https://img.shields.io/badge/RYDAP--HS--APP-v1.1.9-444?logo=github&style=flat&labelColor=333)](https://github.com/rymcu/RYDAP-HS-APP/releases)
+[![](https://img.shields.io/badge/RYMCU.COM-333?logo=googlechrome&style=flat&labelColor=333)](https://rymcu.com)
 ![](https://img.shields.io/badge/Qt-6.9.2-444?logo=qt&style=flat&labelColor=333)
 ![](https://img.shields.io/badge/C++-333?logo=cplusplus&style=flat&labelColor=333)
 
