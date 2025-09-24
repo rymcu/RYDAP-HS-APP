@@ -1,16 +1,65 @@
 ### RYDAP-HS-APP
 
-[![](https://img.shields.io/badge/RYDAP--HS--APP-v1.1.9-444?logo=github&style=flat&labelColor=333)](https://github.com/rymcu/RYDAP-HS-APP/releases)
+[![](https://img.shields.io/badge/RYDAP--HS--APP-v1.2.4-444?logo=github&style=flat&labelColor=333)](https://github.com/rymcu/RYDAP-HS-APP/releases)
 [![](https://img.shields.io/badge/RYMCU.COM-333?logo=googlechrome&style=flat&labelColor=333)](https://rymcu.com)
 ![](https://img.shields.io/badge/Qt-6.9.2-444?logo=qt&style=flat&labelColor=333)
 ![](https://img.shields.io/badge/C++-333?logo=cplusplus&style=flat&labelColor=333)
 
 本仓库仅用于发布 RYDAP-HS 的应用程序和使用说明
 
-#### 1. 应用界面
+### 1.外形结构
 
-#### 2. 更新 RYDAP-HS 应用程序
+![79ee157700160f82eb2b0bb248e76cca.png](https://static.rymcu.com/article/1758004548722.png)
 
-#### 3. 更新 RYDAP-HS 下载器固件
+**按键功能说明：**
 
-#### 4. 更新 RYDAP-HS 下载器离线固件
+* B0
+  出厂下载代码使用，用户无需使用。
+* SET
+  功能一：按住`SET`不放,再连接`USB`，下载器将进入下载器固件更新页面，用于和小助手通信。
+  功能二：在"离线下载"模式下，按`SET`按键，启动离线下载。
+* K0
+  状态切换按键，按住`K0`不放，再连接`USB`，切换在线/离线下载模式。
+
+### 2.界面说明
+
+**主页共4个按钮，点击进入对应页面。点击任意页面左上角，可跳转到主页。**
+
+![image.png](https://static.rymcu.com/article/1758001395039.png)
+
+* 在线模式
+  进入在线模式页面，左上指示灯由黄变为绿时，可当高速daplink下载器使用。
+* 离线模式
+  进入离线模式页面，点击"启动下载"按钮，开始离线下载(前提条件为：已经和目标单片机连接好)。点击左上角文字或单选按钮，可切换为自动下载或手动下载。
+* 引脚定义
+  进入引脚定义页面，共计8个引脚，和实际硬件顺序一致。
+* 关于我们
+  使用说明与`RYMCU`官网二维码。
+  
+### 3.小助手使用说明
+  
+**小助手的核心功能为：将目标单片机的固件更新到离线下载器上。**
+
+![c83735b9ad5307f578ffcd4f166601d3.png](https://static.rymcu.com/article/1758005348741.png)
+
+**小助手软件界面共分为5个功能区域：**
+
+* 功能区1
+  功能为打开下载器`RYDAP-HS`设备，让小助手和下载器建立通信。
+  操作步骤为：先按住下载器的`SET`按键不放，再通过`USB`线连接至计算机，等计算机识别到设备后，点击"刷新设备"，再点击"打开设备"即可。这里一定要注意先后顺序：是先按住`SET`按键不放，再连接`USB`线，等计算机识别到下载器之后可以松开按键。
+* 功能区2
+  功能为单片机型号选择。
+  可以通过搜索，也可以展开选择。例如目标单片机型号为`STM32F103VE`,搜索`103VE`,下方将出现包含该字样的单片机型号，双击选择即可。
+  注意需要双击单片机型号才能选中。后续会陆续增加不同系列单片机型号支持，只需升级小助手的版本即可获取最新支持的型号。
+* 功能区3
+  下载设置功能区域。
+  按照实际需求选择，固件支持`.bin/.hex/.elf/.axf`格式，其中`.bin`格式需要输入程序起始地址，例如`08000000`。
+* 功能区4
+  功能为下载和模式设置。
+  功能区`1-3`设置好后，点击“一键更新“，即可将上述设置及单片机固件下载到高速下载器`RYDAP-HS`。重新给下载上电即可使用。
+  "获取"和"设置"按钮可以分别获取或设置下载器的模式，离线下载`OffLine`模式或在线下载`DAPLink`模式。
+  "解除代码保护"按钮支持部分单片机代码读保护解除，后续会陆续增加不同系列单片机型号支持，只需升级小助手的版本即可获取最新支持的型号。
+* 功能区5
+  功能为固件升级及`Log`显示。
+  当小助手自身有新版本可升级时，"APP固件"按钮为绿色，可点击选择升级。当下载器`RYDAP-HS`有新版本可升级时，"DAP固件"按钮为绿色，可点击选择升级。
+
